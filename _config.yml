@@ -5,11 +5,14 @@
 # Name of your site (displayed in the header)
 name: halisson.me
 
+# Your name
+author: Halisson Bruno
+
 # Short bio or description (displayed in the header)
 description: Web Developer from Somewhere
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
-avatar: https://raw.githubusercontent.com/barryclark/jekyll-now/master/images/jekyll-logo.png
+avatar: https://en.gravatar.com/userimage/14065593/1e0aa02f1b8f7e313eef40126fef6480.jpg?size=200
 
 #
 # Flags below are optional
