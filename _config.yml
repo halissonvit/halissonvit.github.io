@@ -21,12 +21,12 @@ avatar: https://en.gravatar.com/userimage/14065593/1e0aa02f1b8f7e313eef40126fef6
 # Includes an icon in the footer for each username you enter
 footer-links:
   dribbble:
-  email:
-  facebook:
-  flickr:
-  github: barryclark/jekyll-now
+  email: contato@halisson.me
+  facebook: halissonvit
+  flickr: halissonvit
+  github: halissonvit
   instagram:
-  linkedin:
+  linkedin: halissonvit
   pinterest:
   rss: # just type anything here for a working RSS icon, make sure you set the "url" above!
   twitter: jekyllrb

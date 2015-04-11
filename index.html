@@ -6,29 +6,39 @@ layout: stanley
 <div id="ww">
     <div class="container">
         <div class="row">
-            <div class="col-md-4 centered">
+            <div id="welcome" class="col-md-4 centered">
                 <img src="{{ site.avatar }}" alt="Hálisson Bruno" class="clip-circle avatar">
 
                 <h1>Hi, I am {{ site.author }} !</h1>
 
-                <p>Hello everybody. I'm Stanley, a free handsome bootstrap theme coded by BlackTie.co. A really simple
-                    theme for those wanting to showcase their work with a cute & clean style.</p>
+                <div class="content">
+                    <p>I am a software engineer, and I love to build software. Web, Mobile, desktop, anything. Backend
+                        and Frontend, I just love software. :)
+                        If you want to know me better, you can see more info <a href="{{site.baseUrl}}/about">here</a>.
+                    </p>
 
-                <p>Please, consider to register to <a href="http://eepurl.com/IcgkX">our newsletter</a> to be updated
-                    with our latest themes and freebies. Like always, you can use this theme in any project freely.
-                    Share it with your friends.</p>
+                    <p>Take a look on my notes in my <a href="{{site.baseUrl}}/blog">blog</a>. You may find something
+                        interesting
+                        and don't forget to check my <a href="#labs">labs</a> and projects.</p>
+                </div>
 
             </div>
             <!-- /col-lg-8 -->
-            <div class="col-lg-7 col-lg-offset-1 col-md-7 col-md-offset-1 centered">
+            <div class="col-md-7 col-md-offset-1 posts left">
                 <h1>Last thoughts</h1>
 
-                <p>Hello everybody. I'm Stanley, a free handsome bootstrap theme coded by BlackTie.co. A really simple
-                    theme for those wanting to showcase their work with a cute & clean style.</p>
+                {% for post in site.posts %}
+                <article class="post">
 
-                <p>Please, consider to register to <a href="http://eepurl.com/IcgkX">our newsletter</a> to be updated
-                    with our latest themes and freebies. Like always, you can use this theme in any project freely.
-                    Share it with your friends.</p>
+                    <h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
+
+                    <div class="entry">
+                        {{ post.excerpt }}
+                    </div>
+
+                    <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
+                </article>
+                {% endfor %}
 
             </div>
             <!-- /col-lg-8 -->
@@ -41,7 +51,7 @@ layout: stanley
 
 <!-- +++++ Projects Section +++++ -->
 
-<div class="container pt">
+<div id="labs" class="container pt">
     <div class="row mt centered">
         <div class="col-lg-4">
             <a class="zoom green" href="work01.html"><img class="img-responsive"
