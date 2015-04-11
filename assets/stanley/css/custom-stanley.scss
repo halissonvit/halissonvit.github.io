@@ -1,0 +1,46 @@
+---
+---
+
+.avatar {
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+
+  width: 150px;
+  height: 150px;
+
+  &:hover {
+    -webkit-box-shadow: 0 0 40px rgba(49, 98, 49, 0.60), inset 0 0 40px rgb(66, 198, 102);
+    -moz-box-shadow: 0 0 40px rgba(49, 98, 49, 0.60), inset 0 0 40px rgb(66, 198, 102);
+    box-shadow: 0 0 40px rgba(49, 98, 49, 0.60), inset 0 0 40px rgb(66, 198, 102);
+
+    margin-top: -10px;
+    margin-bottom: 10px;
+  }
+}
+
+.clip-circle {
+  -webkit-border-radius: 50em;
+  -moz-border-radius: 50em;
+  border-radius: 50em;
+}
+
+#welcome .content {
+  text-align: left;
+}
+
+#footer {
+  background-color: #4E4E4E;
+
+  #my_social_media_links a {
+    display: inline-block;
+    margin: 5px;
+  }
+
+  #contact {
+    form {
+      color: white;
+    }
+  }
+}
+
