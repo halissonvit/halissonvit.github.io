@@ -1,6 +1,24 @@
 ---
 ---
 
+.grayscale {
+  $scale: 100%;
+  -webkit-filter: grayscale($scale);
+  -moz-filter: grayscale($scale);
+  -ms-filter: grayscale($scale);
+  -o-filter: grayscale($scale);
+  filter: grayscale($scale);
+
+  &:hover {
+    $scale: 0%;
+    -webkit-filter: grayscale($scale);
+    -moz-filter: grayscale($scale);
+    -ms-filter: grayscale($scale);
+    -o-filter: grayscale($scale);
+    filter: grayscale($scale);
+  }
+}
+
 .navbar.navbar-inverse {
   background-color: #3498DB;
   border-color: #2B77AA;
@@ -46,6 +64,7 @@
   #contact {
     form {
       input {
+        border-radius: 0px;
         padding: 0.5em 1em ;
       }
 
