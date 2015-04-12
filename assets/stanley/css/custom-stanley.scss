@@ -42,9 +42,34 @@
     margin: 5px;
   }
 
+  // custom float-label style
   #contact {
     form {
-      color: white;
+      input {
+        padding: 0.5em 1em ;
+      }
+
+      .form-group.float-label-wrapper {
+        label {
+          top: .5em;
+        }
+
+        &.populated {
+          label {
+            color: #3498DB;
+            opacity: 0.8;
+            font-size: 0.8em;
+          }
+
+          .form-control {
+            padding-top: 1.5em;
+          }
+        }
+
+        .form-control {
+          height: auto;
+        }
+      }
     }
   }
 }
