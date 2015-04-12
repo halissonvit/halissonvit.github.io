@@ -27,7 +27,7 @@ layout: stanley
             <div class="col-md-7 col-md-offset-1 posts left">
                 <h1>Last thoughts</h1>
 
-                {% for post in site.posts %}
+                {% for post in site.posts limit:3 %}
                 <article class="post">
 
                     <h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
@@ -49,16 +49,22 @@ layout: stanley
 </div><!-- /ww -->
 
 
-<!-- +++++ Projects Section +++++ -->
+<!-- +++++ Labs Section +++++ -->
 <div id="labs" class="container pt">
     <h1>Last labs</h1>
+
     <div class="row mt centered">
         <div class="col-lg-4">
-            <a href="http://halisson.me/float-label.js">
-                <img id="float-label" class="swap-to-gif grayscale " src="{{ site.baseurl }}/assets/shared/images/float-label.png"
-                     alt="float-label.js"/></a>
 
-            <p>float-label.js</p>
+            {% for lab in site.labs limit:3 %}
+            <section class="lab">
+                <a href="{{ lab.site ? lab.site : lab.url }}">
+                    <img id="{{ lab.id }}" class="{{ lab.class }} grayscale " src="{{ lab.thumbnail }}" alt="{{ lab.description }}"/>
+                </a>
+
+                <p>{{ lab.title }}</p>
+            </section>
+            {% endfor %}
         </div>
     </div>
     <!-- /row -->
