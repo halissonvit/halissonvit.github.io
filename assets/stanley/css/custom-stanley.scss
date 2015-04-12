@@ -22,23 +22,59 @@
 .navbar.navbar-inverse {
   background-color: #3498DB;
   border-color: #2B77AA;
+  width: 100%;
+
+  &.headhesive, &.headhesive--stick {
+    /* Required styles */
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    /* Translate -100% to move off screen */
+    -webkit-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    transform: translateY(-100%);
+
+    /* Animations */
+    -webkit-transition: all 300ms ease-in-out;
+    -moz-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
+  }
+
+  &.headhesive--stick {
+    /* Translate back to 0%; */
+    -webkit-transform: translateY(0%);
+    -ms-transform: translateY(0%);
+    transform: translateY(0%);
+
+    padding: 0px;
+  }
 }
 
 .avatar {
-  -webkit-transition: all 1s ease-in-out;
-  -moz-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
+  -webkit-transition: all 0.8s ease-in-out;
+  -moz-transition: all 0.8s ease-in-out;
+  transition: all 0.8s ease-in-out;
 
   width: 150px;
   height: 150px;
 
   &:hover {
-    -webkit-box-shadow: 0 0 40px rgba(49, 98, 49, 0.60), inset 0 0 40px rgb(66, 198, 102);
-    -moz-box-shadow: 0 0 40px rgba(49, 98, 49, 0.60), inset 0 0 40px rgb(66, 198, 102);
-    box-shadow: 0 0 40px rgba(49, 98, 49, 0.60), inset 0 0 40px rgb(66, 198, 102);
+    -webkit-box-shadow: 0 0 40px #2B77AA, inset 0 0 40px #3498DB;
+    -moz-box-shadow: 0 0 40px #2B77AA, inset 0 0 40px #3498DB;
+    box-shadow: 0 0 40px #2B77AA, inset 0 0 40px #3498DB;
 
-    margin-top: -10px;
-    margin-bottom: 10px;
+    margin-top: -2%;
+    margin-bottom: 2%;
+  }
+
+  &.micro {
+    width: 35px;
+    height: 35px;
+
+    &.invisible {
+      opacity: 0;
+    }
   }
 }
 
@@ -52,14 +88,18 @@
   text-align: left;
 }
 
-.labs, .projects {
-  .thumbnail {
-    width: 100%;
-    padding: 10px;
-    height: 335px;
+#work {
+  padding-top: 40px;
+
+  .labs, .projects {
+    margin: 0px;
+
+    .thumbnail {
+      width: 100%;
+      padding: 10px;
+    }
   }
 }
-
 
 #footer {
   background-color: #4E4E4E;
@@ -74,7 +114,7 @@
     form {
       input, textarea {
         border-radius: 0px;
-        padding: 0.5em 1em ;
+        padding: 0.5em 1em;
       }
 
       .form-group.float-label-wrapper {

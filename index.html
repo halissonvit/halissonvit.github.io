@@ -19,7 +19,7 @@ layout: stanley
 
                     <p>Take a look on my notes in my <a href="{{site.baseUrl}}/blog">blog</a>. You may find something
                         interesting
-                        and don't forget to check my <a href="#labs">labs</a> and projects.</p>
+                        and don't forget to check my <a href="#work">labs and projects.</a></p>
                 </div>
 
             </div>
@@ -51,11 +51,11 @@ layout: stanley
 
 <!-- +++++ Labs Section +++++ -->
 <div id="work" class="container pt">
-    <section class="projects row mt centered">
+    <section class="projects row col-md-8 mt centered">
         <h1>Last projects</h1>
 
         {% for project in site.projects limit:3 %}
-        <section class="project col-lg-4">
+        <section class="project col-md-4">
             <a href="{% if project.site %}{{project.site}}{% else %}{{ project.url }}{% endif %}">
                 <img id="{{ project.id }}" class="{{ project.class }} grayscale thumbnail"
                      src="{{ project.thumbnail }}" alt="{{ project.description }}"/>
@@ -66,11 +66,11 @@ layout: stanley
         {% endfor %}
     </section>
 
-    <section class="labs row mt centered">
+    <section class="labs row col-md-8 mt centered">
         <h1>Last labs</h1>
 
         {% for lab in site.labs limit:3 %}
-        <div class="lab col-lg-4">
+        <div class="lab col-md-4">
             <a href="{% if lab.site %}{{lab.site}}{% else %}{{ lab.url }}{% endif %}">
                 <img id="{{ lab.id }}" class="{{ lab.class }} grayscale thumbnail" src="{{ lab.thumbnail }}"
                      alt="{{ lab.description }}"/>
