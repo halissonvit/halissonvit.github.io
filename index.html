@@ -50,22 +50,35 @@ layout: stanley
 
 
 <!-- +++++ Labs Section +++++ -->
-<div id="labs" class="container pt">
-    <h1>Last labs</h1>
+<div id="work" class="container pt">
+    <section class="projects row mt centered">
+        <h1>Last projects</h1>
 
-    <div class="row mt centered">
-        <div class="col-lg-4">
+        {% for project in site.projects limit:3 %}
+        <section class="project col-lg-4">
+            <a href="{% if project.site %}{{project.site}}{% else %}{{ project.url }}{% endif %}">
+                <img id="{{ project.id }}" class="{{ project.class }} grayscale thumbnail"
+                     src="{{ project.thumbnail }}" alt="{{ project.description }}"/>
+            </a>
 
-            {% for lab in site.labs limit:3 %}
-            <section class="lab">
-                <a href="{{ lab.site ? lab.site : lab.url }}">
-                    <img id="{{ lab.id }}" class="{{ lab.class }} grayscale " src="{{ lab.thumbnail }}" alt="{{ lab.description }}"/>
-                </a>
+            <p>{{ project.title }}</p>
+        </section>
+        {% endfor %}
+    </section>
 
-                <p>{{ lab.title }}</p>
-            </section>
-            {% endfor %}
+    <section class="labs row mt centered">
+        <h1>Last labs</h1>
+
+        {% for lab in site.labs limit:3 %}
+        <div class="lab col-lg-4">
+            <a href="{% if lab.site %}{{lab.site}}{% else %}{{ lab.url }}{% endif %}">
+                <img id="{{ lab.id }}" class="{{ lab.class }} grayscale thumbnail" src="{{ lab.thumbnail }}"
+                     alt="{{ lab.description }}"/>
+            </a>
+
+            <p>{{ lab.title }}</p>
         </div>
-    </div>
+        {% endfor %}
+    </section>
     <!-- /row -->
 </div><!-- /container -->
