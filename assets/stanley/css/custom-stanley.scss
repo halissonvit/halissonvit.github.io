@@ -24,7 +24,7 @@
   border-color: #2B77AA;
   width: 100%;
 
-  &.headhesive, &.headhesive--stick {
+  &.headhesive {
     /* Required styles */
     position: fixed;
     top: 0;
@@ -48,6 +48,10 @@
     transform: translateY(0%);
 
     padding: 0px;
+
+    a.navbar-brand {
+      padding: 5px;
+    }
   }
 }
 

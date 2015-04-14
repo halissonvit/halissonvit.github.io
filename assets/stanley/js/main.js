@@ -6,12 +6,14 @@ $(document).ready(function () {
         offset: '#ww',
         clone: true,
         throttle: 500,
-        onStick: function (headhesive) {
+        onStick: function () {
+            var headhesive = this;
             $.each([headhesive.elem, headhesive.targetElem], function(i, navbar) {
                 $(navbar).find('.avatar').removeClass('invisible');
             });
         },
-        onUnstick: function (headhesive) {
+        onUnstick: function () {
+            var headhesive = this;
             $.each([headhesive.elem, headhesive.targetElem], function(i, navbar) {
                 $(navbar).find('.avatar').addClass('invisible');
             });
