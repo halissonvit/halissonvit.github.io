@@ -5,20 +5,7 @@ $(document).ready(function () {
     var properties = {
         offset: '#ww',
         clone: true,
-        throttle: 500,
-        onStick: function () {
-            var headhesive = this;
-            $.each([headhesive.elem, headhesive.targetElem], function(i, navbar) {
-                $(navbar).find('.avatar').removeClass('invisible');
-            });
-        },
-        onUnstick: function () {
-            var headhesive = this;
-            $.each([headhesive.elem, headhesive.targetElem], function(i, navbar) {
-                $(navbar).find('.avatar').addClass('invisible');
-            });
-        }
-
+        throttle: 500
     };
-    var headhesive = new Headhesive('.navbar', properties);
+    new Headhesive('.navbar', properties);
 });

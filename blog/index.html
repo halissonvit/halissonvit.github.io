@@ -3,16 +3,17 @@ layout: blog
 ---
 
 <div class="posts">
-  {% for post in site.posts %}
+    {% for post in site.posts %}
     <article class="post">
+        <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
 
-      <h1 class="typl8-beta"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+        <div class="entry">
+            {{ post.excerpt }}
+        </div>
 
-      <div class="entry">
-        {{ post.excerpt }}
-      </div>
-
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
+        <a href="{{ site.baseurl }}{{ post.url }}" class="read-more btn btn-info">
+            Read More &nbsp; <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
+        </a>
     </article>
-  {% endfor %}
+    {% endfor %}
 </div>
