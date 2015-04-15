@@ -18,6 +18,7 @@ micro_avatar: http://2.gravatar.com/avatar/6137f45e29a5090110775f554f99d887?size
 #
 # Flags below are optional
 #
+permalink: /blog/:categories/:year/:month/:day/:title
 
 # Includes an icon in the footer for each username you enter
 footer-links:
