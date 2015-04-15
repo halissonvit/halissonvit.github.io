@@ -11,17 +11,16 @@
     <title>halisson.me - about my works and thoughts</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="{{ site.baseurl }}/assets/stanley/css/bootstrap.css" rel="stylesheet">
-
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="{{ site.baseUrl }}/assets/stanley.css" rel="stylesheet">
 
     <!-- Custom specific page styles -->
     {% if page.styles %}
-      {% for stylesheet in page.styles %}
-        <link rel="stylesheet" href="{{ stylesheet }}" media="screen" type="text/css">
-      {% endfor %}
+    {% for stylesheet in page.styles %}
+    <link rel="stylesheet" href="{{ stylesheet }}" media="screen" type="text/css">
+    {% endfor %}
     {% endif %}
 
 
@@ -43,8 +42,11 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="{{ site.baseurl }}/"> <img src="{{ site.micro_avatar }}" alt="Hálisson Bruno"
-                                                                     class="clip-circle avatar invisible grayscale micro"> halisson.me</a>
+            <a class="navbar-brand" href="{{ site.baseurl }}/">
+                <!--<img src="{{ site.micro_avatar }}" alt="Hálisson Bruno"-->
+                     <!--class="img-circle avatar invisible grayscale micro"/>-->
+                halisson.me
+            </a>
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
