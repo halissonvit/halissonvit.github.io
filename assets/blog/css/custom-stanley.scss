@@ -1,0 +1,41 @@
+---
+---
+
+.navbar.navbar-inverse {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  padding: 0px;
+
+  a.navbar-brand {
+    padding: 5px;
+  }
+}
+
+#blog {
+  padding-top: 70px;
+  padding-bottom: 70px;
+
+  header {
+    margin-bottom: 30px;
+
+    #blog-title {
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
+  }
+
+  #content {
+    margin: 0 auto;
+    float: none;
+
+    p {
+      font-size: 14px;
+    }
+
+    footer {
+      border-top: 1px dotted;
+    }
+  }
+}

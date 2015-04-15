@@ -17,6 +17,13 @@
     <!-- Custom styles for this template -->
     <link href="{{ site.baseUrl }}/assets/stanley.css" rel="stylesheet">
 
+    <!-- Custom specific page styles -->
+    {% if page.styles %}
+      {% for stylesheet in page.styles %}
+        <link rel="stylesheet" href="{{ stylesheet }}" media="screen" type="text/css">
+      {% endfor %}
+    {% endif %}
+
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -25,7 +32,7 @@
     <![endif]-->
 </head>
 
-<body>
+<body class="{{page.title}}">
 
 <!-- Static navbar -->
 <div class="navbar navbar-inverse navbar-static-top">
@@ -44,7 +51,7 @@
                 <li><a href="{{site.baseUrl}}/about">About</a></li>
                 <li><a href="{{site.baseUrl}}/blog">Blog</a></li>
                 <!--<li><a href="{{site.baseUrl}}/work">Work</a></li>-->
-                <li><a href="{{site.baseUrl}}/#contact">Contact</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
         <!--/.nav-collapse -->
