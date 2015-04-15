@@ -63,7 +63,6 @@ collections:
 
 markdown: redcarpet
 highlighter: pygments
-permalink: /:title/
 
 # The release of Jekyll Now that you're using
 version: v1.1.0
