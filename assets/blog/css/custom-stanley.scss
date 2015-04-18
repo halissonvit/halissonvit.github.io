@@ -9,7 +9,11 @@
   padding: 0px;
 
   a.navbar-brand {
-    padding: 15px;
+    padding: 10px;
+
+    img {
+      width: 150px;
+    }
   }
 }
 
