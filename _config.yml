@@ -5,28 +5,33 @@
 # Name of your site (displayed in the header)
 name: halisson.me
 
+# Your name
+author: Halisson Bruno
+
 # Short bio or description (displayed in the header)
 description: Web Developer from Somewhere
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
-avatar: https://raw.githubusercontent.com/barryclark/jekyll-now/master/images/jekyll-logo.png
+avatar: http://2.gravatar.com/avatar/6137f45e29a5090110775f554f99d887?size=200
+micro_avatar: http://2.gravatar.com/avatar/6137f45e29a5090110775f554f99d887?size=45
 
 #
 # Flags below are optional
 #
+permalink: /blog/:categories/:year/:month/:day/:title
 
 # Includes an icon in the footer for each username you enter
 footer-links:
   dribbble:
-  email:
-  facebook:
-  flickr:
-  github: barryclark/jekyll-now
+  email: contato@halisson.me
+  facebook: halissonvit
+  flickr: halissonvit
+  github: halissonvit
   instagram:
-  linkedin:
+  linkedin: halissonvit
   pinterest:
   rss: # just type anything here for a working RSS icon, make sure you set the "url" above!
-  twitter: jekyllrb
+  twitter: halissonbruno
   stackoverflow: # your stackoverflow profile, e.g. "users/50476/bart-kiers"
   youtube: # channel/<your_long_string> or user/<user-name>
 
@@ -47,13 +52,18 @@ url:
 # then add in the baseurl here, like this: "/repository-name"
 baseurl: ""
 
+collections:
+  labs:
+    output: false
+  projects:
+    output: true
+
 #
 # !! You don't need to change any of the configuration flags below !!
 #
 
 markdown: redcarpet
 highlighter: pygments
-permalink: /:title/
 
 # The release of Jekyll Now that you're using
 version: v1.1.0
