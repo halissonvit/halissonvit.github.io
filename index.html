@@ -5,53 +5,23 @@ layout: stanley
 <!-- +++++ Welcome Section +++++ -->
 <div id="ww">
     <div class="container">
-        <div class="row">
-            <div id="welcome" class="col-md-4 centered">
-                <img src="{{ site.avatar }}" alt="Hálisson Bruno" class="img-circle avatar">
+        <div id="welcome" class="text-center">
+            <a href="/about"> <img src="{{ site.avatar }}" alt="Hálisson Bruno" class="img-circle avatar"></a>
 
-                <h1>Hi, I am {{ site.author }} !</h1>
+            <h1>Hi, I am {{ site.author }} !</h1>
 
-                <div class="content">
-                    <p>I am a software engineer, and I love to build software. Web, Mobile, desktop, anything. Backend
-                        and Frontend, I just love to code. :)
-                        If you want to know me better, you can see more info <a href="{{site.baseUrl}}/about">here</a>.
-                    </p>
-
-                    <p>Take a look on my notes in my <a href="{{site.baseUrl}}/blog">blog</a>. You may find something
-                        interesting
-                        and don't forget to check my <a href="#work">labs and projects.</a></p>
-                </div>
-
-            </div>
-            <!-- /col-lg-8 -->
-            <div class="col-md-7 col-md-offset-1 posts left">
-                <h1>Last thoughts</h1>
-
-                {% for post in site.posts limit:3 %}
-                <article class="post">
-
-                    <h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
-
-                    <div class="entry">
-                        {{ post.excerpt }}
-                    </div>
-
-                    <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-                </article>
-                {% endfor %}
-
-            </div>
-            <!-- /col-lg-8 -->
+            <h2>I am a software engineer, and I love to build software. Web, Mobile, desktop, anything.
+                backend and Frontend, I just love to code. :)</h2>
         </div>
-        <!-- /row -->
     </div>
+    <!-- /row -->
     <!-- /container -->
 </div><!-- /ww -->
 
 
-<!-- +++++ Labs Section +++++ -->
+<!-- +++++ work Section +++++ -->
 <div id="work" class="container pt">
-    <section class="projects row col-md-8 mt centered">
+    <section class="projects row mt">
         <h1>Last projects</h1>
 
         {% for project in site.projects limit:3 %}
@@ -61,23 +31,10 @@ layout: stanley
                      src="{{ project.thumbnail }}" alt="{{ project.description }}"/>
             </a>
 
-            <p>{{ project.title }}</p>
+            <p class="title">{{ project.title }}</p>
+
+            <p class="technologies">{{ project.technologies }}</p>
         </section>
-        {% endfor %}
-    </section>
-
-    <section class="labs row col-md-8 mt centered">
-        <h1>Last labs</h1>
-
-        {% for lab in site.labs limit:3 %}
-        <div class="lab col-md-4">
-            <a href="{% if lab.site %}{{lab.site}}{% else %}{{ lab.url }}{% endif %}">
-                <img id="{{ lab.id }}" class="{{ lab.class }} grayscale thumbnail" src="{{ lab.thumbnail }}"
-                     alt="{{ lab.description }}"/>
-            </a>
-
-            <p>{{ lab.title }}</p>
-        </div>
         {% endfor %}
     </section>
     <!-- /row -->

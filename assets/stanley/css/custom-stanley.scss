@@ -19,11 +19,20 @@
   }
 }
 
+a.btn {
+  background-color: #3498DB;
+  border-color: #2B77AA;
+  border-radius: 0;
+  padding: 10px;
+  font-size: 1.5em;
+  margin: 0 10px;
+}
+
 .navbar.navbar-inverse {
   background-color: #3498DB;
   border-color: #2B77AA;
   width: 100%;
-
+  padding: 10px;
 
   a.navbar-brand {
     padding: 0;
@@ -63,40 +72,61 @@
     }
   }
 }
+#ww {
+  padding: 40px;
+}
 
-.avatar {
-  -webkit-transition: all 0.8s ease-in-out;
-  -moz-transition: all 0.8s ease-in-out;
-  transition: all 0.8s ease-in-out;
+#welcome {
 
-  width: 150px;
-  height: 150px;
-
-  &:hover {
-    -webkit-box-shadow: 0 0 40px #2B77AA, inset 0 0 40px #3498DB;
-    -moz-box-shadow: 0 0 40px #2B77AA, inset 0 0 40px #3498DB;
-    box-shadow: 0 0 40px #2B77AA, inset 0 0 40px #3498DB;
-
-    margin-top: -2%;
-    margin-bottom: 2%;
+  h2 {
+    font-weight: lighter;
+    font-size: 20px;
+    padding: 0 150px;
   }
 
-  &.micro {
-    width: 35px;
-    height: 35px;
+  .avatar {
+    -webkit-transition: all 0.8s ease-in-out;
+    -moz-transition: all 0.8s ease-in-out;
+    transition: all 0.8s ease-in-out;
 
-    &.invisible {
-      opacity: 0;
+    width: 85px;
+    height: 85px;
+
+    &:hover {
+      -webkit-box-shadow: 0 0 40px #2B77AA, inset 0 0 40px #3498DB;
+      -moz-box-shadow: 0 0 40px #2B77AA, inset 0 0 40px #3498DB;
+      box-shadow: 0 0 40px #2B77AA, inset 0 0 40px #3498DB;
+
+      margin-top: -1%;
+      margin-bottom: 1%;
+    }
+
+    &.micro {
+      width: 35px;
+      height: 35px;
+
+      &.invisible {
+        opacity: 0;
+      }
     }
   }
 }
 
-#welcome .content {
-  text-align: left;
-}
-
 #work {
   padding-top: 40px;
+
+  h1 {
+    text-transform: uppercase;
+    margin: 10px;
+  }
+
+  .thumbnail {
+    margin-bottom: 5px;
+  }
+
+  p.title, p.technologies {
+    margin: 0;
+  }
 
   .labs, .projects {
     margin: 0px;
