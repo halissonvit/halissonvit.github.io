@@ -1,0 +1,211 @@
+---
+---
+
+@import "svg-icons";
+@import "bootstrap.min";
+@import "custom-bootstrap";
+@import "typeplate";
+@import "/assets/css/jquery.float-label.css";
+
+@import 'http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic';
+@import 'http://fonts.googleapis.com/css?family=Merriweather:400,300italic,300,400italic,700,700italic,900italic,900';
+@import 'http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,700italic,900italic';
+
+body {
+  font-family: "PT sans", sans-serif;
+}
+
+h1, h2, h3, h4, h6, h6 {
+  @extend .typl8-delta;
+  text-transform: uppercase;
+
+  font-family: "Merriweather", sans-serif;
+}
+
+
+a {
+  color: #1abc9c;
+  word-wrap: break-word;
+
+  $transition: color 0.1s ease-in, background 0.1s ease-in;
+
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -ms-transition: $transition;
+  -o-transition: $transition;
+  transition: $transition;
+}
+
+a:hover,
+a:focus {
+  color: #7b7b7b;
+  text-decoration: none;
+  outline: 0;
+}
+
+a:before,
+a:after {
+  $transition:color 0.1s ease-in, background 0.1s ease-in;
+
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -ms-transition: $transition;
+  -o-transition: $transition;
+  transition: $transition;
+}
+
+.btn-theme {
+  color: white;
+  background: #3498DB;
+  border-color: #1d749f;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: -0.038em;
+  padding: 15px;
+
+  &:hover {
+    background-color: #3286c6;
+  }
+}
+
+
+.grayscale {
+  $transition:all 0.3s ease-in;
+
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -ms-transition: $transition;
+  -o-transition: $transition;
+  transition: $transition;
+
+  $scale: 100%;
+  -webkit-filter: grayscale($scale);
+  -moz-filter: grayscale($scale);
+  -ms-filter: grayscale($scale);
+  -o-filter: grayscale($scale);
+  filter: grayscale($scale);
+
+  &:hover {
+    $scale: 0%;
+    -webkit-filter: grayscale($scale);
+    -moz-filter: grayscale($scale);
+    -ms-filter: grayscale($scale);
+    -o-filter: grayscale($scale);
+    filter: grayscale($scale);
+  }
+}
+
+#intro {
+  @extend .jumbotron;
+  padding: 40px;
+
+  .container {
+    padding: 0;
+    margin: 0 auto;
+    text-align: center;
+
+    h1 {
+      @extend .typl8-beta;
+
+      font-family: "Lato", sans-serif;
+      font-weight: bolder;
+      margin-bottom: 5px;
+    }
+
+    .description {
+      max-width: 620px;
+    }
+
+    #more_about_me_theme {
+      margin-top: 30px;
+      padding: 15px;
+    }
+  }
+}
+
+#work {
+  padding-top: 40px;
+
+  .thumbnail {
+    margin-bottom: 5px;
+  }
+
+  p.title, p.technologies {
+    margin: 0;
+  }
+
+  .labs, .projects {
+    margin: 0px;
+
+    .thumbnail {
+      width: 100%;
+      padding: 10px;
+    }
+  }
+}
+
+#footer {
+  margin-top: 50px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #4E4E4E;
+
+  p {
+    color: white;
+  }
+
+  h1, h2 {
+    @extend .typl8-epsilon;
+    color: white;
+    text-transform: uppercase;
+  }
+
+  #last_thoughts {
+    h2 {
+      text-transform: none;
+    }
+  }
+
+  #my_social_media_links {
+    text-align: center;
+
+    a {
+      display: inline-block;
+      margin: 5px;
+    }
+  }
+
+  // custom float-label style
+  #contact {
+    text-align: right;
+
+    form {
+      input, textarea {
+        border-radius: 0px;
+        padding: 0.5em 1em;
+      }
+
+        .form-group.float-label-wrapper {
+        label {
+          top: .5em;
+        }
+
+        &.populated {
+          label {
+            color: #3498DB;
+            opacity: 0.8;
+            font-size: 0.8em;
+          }
+
+          .form-control {
+            padding-top: 1.5em;
+          }
+        }
+
+        .form-control {
+          height: auto;
+        }
+      }
+    }
+  }
+}

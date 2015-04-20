@@ -1,18 +1,36 @@
 ---
-layout: default
+layout: halissonvit
 ---
 
-<div class="posts">
-  {% for post in site.posts %}
-    <article class="post">
+<!-- Main jumbotron for a primary marketing message or call to action -->
+<div id="intro">
+    <div class="container">
+        <h1>My name is {{ site.author }}</h1>
 
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+        <p class="description">I am a software engineer, and I love to build software. Web, Mobile, desktop, anything.
+            backend and Frontend, I just love to code. :)</p>
 
-      <div class="entry">
-        {{ post.excerpt }}
-      </div>
-
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-    </article>
-  {% endfor %}
+        <a id="more_about_me_theme" class="btn btn-theme btn-lg" href="/about" role="button">More about me</a>
+    </div>
 </div>
+
+<div id="work" class="container pt">
+    <section class="projects row mt">
+        <h1>Projects</h1>
+
+        {% for project in site.projects limit:3 %}
+        <section class="project col-md-4">
+            <a href="{% if project.site %}{{project.site}}{% else %}{{ project.url }}{% endif %}">
+                <img id="{{ project.id }}" class="{{ project.class }} grayscale thumbnail"
+                     src="{{ project.thumbnail }}" alt="{{ project.description }}"/>
+            </a>
+
+            <p class="title">{{ project.title }}</p>
+
+            <p class="technologies">{{ project.technologies }}</p>
+        </section>
+        {% endfor %}
+    </section>
+    <!-- /row -->
+</div><!-- /container -->
+

@@ -1,0 +1,59 @@
+---
+---
+
+#skills {
+  .author {
+    float: right;
+    padding: 0;
+    margin-bottom: 30px;
+    text-align: center;
+
+    .avatar {
+      margin: 20px auto;
+    }
+
+    .description {
+      text-align: start;
+      padding: 0 20px;
+    }
+
+    background: #f4f4f4;
+
+    .photo {
+      width: 175px;
+    }
+
+    a.btn {
+      margin: 0;
+      padding: 15px;
+      border: none
+    }
+  }
+
+  margin: 40px 0;
+  .logos {
+    margin: 0 0 30px 0;
+
+    .logo {
+      margin: 0 10px;
+      float: left;
+
+      img {
+        height: 61px;
+        max-width: 100px;
+      }
+
+      strong {
+        width: 100%;
+        text-align: center;
+        padding-top: 15px;
+        display: block;
+      }
+    }
+
+    &:after {
+      content: '';
+      clear: both;
+    }
+  }
+}
