@@ -15,17 +15,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
-    <link rel="stylesheet" href="/assets/css/main.css">
-
-
-    {% if page.styles %}
-    <!-- Custom specific page styles -->
-    {% for stylesheet in page.styles %}
-    <link rel="stylesheet" href="{{ stylesheet }}" media="screen" type="text/css">
-    {% endfor %}
-    {% endif %}
-
-
     <style>
         body {
             padding-top: 50px;
@@ -129,6 +118,17 @@
 
     </div>
 </footer>
+
+<link rel="stylesheet" href="/assets/css/main.css">
+
+
+{% if page.styles %}
+<!-- Custom specific page styles -->
+{% for stylesheet in page.styles %}
+<link rel="stylesheet" href="{{ stylesheet }}" media="screen" type="text/css">
+{% endfor %}
+{% endif %}
+
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"><\/script>')</script>
