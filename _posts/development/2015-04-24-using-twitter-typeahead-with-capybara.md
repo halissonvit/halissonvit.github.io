@@ -32,4 +32,4 @@ API.
 
 I think it's a little hackish, but I could not find a better solution for now.
 
-Source: https://github.com/twitter/typeahead.js/issues/798
+Source: [typeahead.js/issues/798](https://github.com/twitter/typeahead.js/issues/798)
