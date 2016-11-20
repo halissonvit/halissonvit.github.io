@@ -4,33 +4,14 @@ layout: halissonvit
 
 <!-- Main jumbotron for a primary marketing message or call to action -->
 <div id="intro">
-    <div class="container">
-        <h1>My name is {{ site.author }}</h1>
+  <div class="container">
+    <h1>My name is {{ site.author }}</h1>
 
-        <p class="description">I am a software engineer, and I love building software. Web, Mobile, desktop, anything.
-            Back end and Front end, I just love coding. :)</p>
+    <p class="description">I am a software engineer and I love building software. <br/ > Web, Mobile, desktop, anything.
+    Back end and Front end.</p>
+    <p> I just love coding. :)</p>
 
-        <a id="more_about_me_theme" class="btn btn-theme btn-lg" href="/about" role="button">More about me</a>
-    </div>
+    <a id="more_about_me_theme" class="btn btn-theme btn-lg" href="/about" role="button">More about me</a>
+  </div>
 </div>
-
-<div id="work" class="container pt">
-    <section class="projects row mt">
-        <h1>Projects</h1>
-
-        {% for project in site.projects limit:3 %}
-        <section class="project col-md-4">
-            <a href="{% if project.site %}{{project.site}}{% else %}{{ project.url }}{% endif %}">
-                <img id="{{ project.id }}" class="{{ project.class }} grayscale thumbnail"
-                     src="{{ project.thumbnail }}" alt="{{ project.description }}"/>
-            </a>
-
-            <p class="title">{{ project.title }}</p>
-
-            <p class="technologies">{{ project.technologies }}</p>
-        </section>
-        {% endfor %}
-    </section>
-    <!-- /row -->
-</div><!-- /container -->
 

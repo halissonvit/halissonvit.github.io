@@ -44,7 +44,9 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="/about">About</a></li>
                     <li><a href="/blog">Blog</a></li>
+                    <!--
                     <li><a href="/">Work</a></li>
+                    -->
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
@@ -121,11 +123,18 @@
 <link rel="stylesheet" href="/assets/css/main.css">
 
 
+{% if layout.styles %}
+  <!-- Custom specific layout styles -->
+  {% for stylesheet in layout.styles %}
+    <link rel="stylesheet" href="{{ stylesheet }}" media="screen" type="text/css">
+  {% endfor %}
+{% endif %}
+
 {% if page.styles %}
-<!-- Custom specific page styles -->
-{% for stylesheet in page.styles %}
-<link rel="stylesheet" href="{{ stylesheet }}" media="screen" type="text/css">
-{% endfor %}
+  <!-- Custom specific page styles -->
+  {% for stylesheet in page.styles %}
+    <link rel="stylesheet" href="{{ stylesheet }}" media="screen" type="text/css">
+  {% endfor %}
 {% endif %}
 
 

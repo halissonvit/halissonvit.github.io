@@ -216,7 +216,7 @@
 
 @mixin typl8-white-space($wrap-space) {
   @if $wrap-space == 'pre-wrap' {
-    white-space: #{-moz-}$wrap-space;
+    white-space: unquote("#{-moz-}$wrap-space");
     white-space: $wrap-space;
   } @else {
     white-space: $wrap-space;
