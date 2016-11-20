@@ -14,12 +14,12 @@ tags:
   - autocomplete
 ---
 
-I came up to a situation where I needed to test a typeahead autocomplete field. For some reason, the interaction with the
-autocomplete field does not show the suggestions. I have searched for some solution, and almost all of them involved the
-execution of some script using Capybara.
+I ran into a situation where I need to test a typeahead autocomplete field. For some reason the interaction with the
+autocomplete field does not show suggestions. I have searched for a solution, and almost all of them involved the
+execution of some sort of scripts using Capybara.
 
-The solution I am using right now, is to create a typedown event, and to fire the event after set the value using typeahead
-API.
+The solution I am using right now, is to create a typedown event, and to fire the event after set the value using
+the typeahead API.
 
 ```ruby
       def fill_in_auto_complete(selector, value)
@@ -30,6 +30,6 @@ API.
       end
 ```
 
-I think it's a little hackish, but I could not find a better solution for now.
+I think it's a little hackish, but it will do the job for now.
 
 Source: [typeahead.js/issues/798](https://github.com/twitter/typeahead.js/issues/798)
